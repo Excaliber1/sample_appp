@@ -5,41 +5,34 @@
         <%= render 'shared/user_info' %>
       </section>
       <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
-  </div>
-   <div class="span8">
+    <div class="span8">
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>
     </div>
+  </div>  
 <% else %>
+  <div class="center hero-unit">
+     <h1>Welcome to BaBel</h1>
 
-<div class="center hero-unit">
-  <h1>Welcome to BaBel</h1>
+    <h2>
+      A lounge for sophisticated connectivity.
+    </h2>
+    <%= link_to image_tag("ok.jpg", alt: "Rails"), 'http://rubyonrails.org/' %>
+    <br>
+    <br>
 
-  <h2>
-   A lounge for bringing education to a more "interconnected" level.
+    <%= link_to "Learn more about us!", about_path, class: "btn btn-large btn-primary" %>
+    &nbsp; &nbsp; &nbsp; 
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+
     
-  </h2>
- <%= link_to "Learn more about us!", about_path, class: "btn btn-large btn-primary" %>
+  </div>
 
- <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-
-<article>
-	<h2> </h2>
-
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
-
-<h2>What is BaBel?</h2>
-
-<h2>In simplest terms BaBel is a lounge dedicated to bringing both teachers and students:   A) The most up-to-date open-sourced E-Books for each curriculum. </h2>
-
-<h2>B) A platform for Video sharing across the Globe in the form of:  &bull; Teachers teaching Teachers new innovative teaching strategies  &bull; Students Seeking/offering help   &bull; A spectrum of diverse classrooms working together </h2>
-
-<h2>C) A platform for developing professionals and scholars</h2>
-
-<h2> </h2>
-</article>
-</div>
-<% end %>
+ 
+<% end %> 
